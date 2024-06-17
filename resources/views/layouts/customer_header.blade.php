@@ -105,7 +105,7 @@
               <button
                 class="btn btn-secondary d-flex justify-content-between align-items-center dropdown-toggle dropdownBtn rounded-pill"
                 type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                <div class="profiletk d-flex justify-content-center align-items-center"> PC </div>
+                <div class="profiletk d-flex justify-content-center align-items-center"> {{ Auth::user()->initials }} </div>
                 <svg width="46" height="52" viewBox="0 0 46 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M23 32.5L14.8676 23.309L17.5796 20.2453L23 26.3727L28.4203 20.2453L31.1324 23.309L23 32.5Z"
                     fill="#3265FE" />
@@ -138,7 +138,7 @@
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item py-3" href="#">
+                  <a class="dropdown-item py-3" href="{{ route('logout') }}">
                     <div>Logout</div>
                   </a>
                 </li>

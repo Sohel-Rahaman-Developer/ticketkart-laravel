@@ -36,24 +36,42 @@
                     </div>
 
                     <div class="signin-form">
+
+                        @if($message = Session::get('success'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                          <strong>Error</strong> {{ $message }}
+                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        @endif
+
+                        @if($message = Session::get('error'))
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                          <strong>Error</strong> {{ $message }}
+                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        @endif
+
                         <h2 class="form-title text-center pb-2">Log in</h2>
-                        <form method="" class="register-form my-3" id="login-form">
+                        <form method="POST" class="register-form my-3" id="login-form" action="{{ route('login') }}">
+                            @csrf
                             <div class="form-group">
-                                <label for="your_name"><i class="zmdi zmdi-account fa-solid fa-user"></i></label>
-                                <input type="text" name="your_name" id="your_name" placeholder="Email address"/>
+                                <label><i class="zmdi zmdi-account fa-solid fa-user"></i></label>
+                                <input type="text" name="email" placeholder="Email address" value="{{ old('email') }}"/>
+                                @if($errors->has('email'))
                                 <div class="error-messege">
-                                  <!-- <span>*Email address field is required*</span> -->
-                              </div>
+                                    <span>*{{ $errors->first('email') }}</span>
+                                </div>
+                                @endif
                             </div>
                             <div class="form-group">
-                                <label for="your_pass"><i class="zmdi zmdi-lock fa-solid fa-lock"></i></label>
-                                <input type="password" name="your_pass" id="password-field" placeholder="Password"/>
+                                <label><i class="zmdi zmdi-lock fa-solid fa-lock"></i></label>
+                                <input type="password" name="password" placeholder="Password"/>
+                                @if($errors->has('password'))
                                 <div class="error-messege">
-                                  <!-- <span>*Password field is required*</span> -->
-                              </div>
-                                <span toggle="#password-field"
-                                    class="fa fa-fw fa-eye field-icon toggle-password"></span>
-                  
+                                  <span>*{{ $errors->first('password') }}</span>
+                                </div>
+                                @endif
+                                <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                             </div>
                             <div class="form-group">
                                 <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />

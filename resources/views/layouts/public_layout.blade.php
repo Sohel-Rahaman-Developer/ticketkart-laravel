@@ -60,6 +60,7 @@
     </style>
 
     @yield('customcss')
+    @livewireStyles
 </head>
 
 <body>
@@ -99,6 +100,8 @@
   
 
   @yield('customjs')
+
+  @livewireScripts
 </body>
 
 </html>
