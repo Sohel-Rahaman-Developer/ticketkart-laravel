@@ -1,0 +1,56 @@
+.report-box{
+    max-width: 310px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 2px 1px #ccc;
+    cursor: pointer;
+    margin-bottom: 15px;
+    background-color: #f0f0f0;
+    transition: 0.2s;
+    height: 78px;
+}
+.report-tabs li:hover{
+    color: #fff !important;
+    background-color: #3265FE !important;
+}
+@media (min-width: 600px) and (max-width: 800px) {
+    .report-box{
+        height: 98px;
+
+    }
+}
+.report-box:hover{
+    box-shadow: 0px 0px 2px 1px #3265fe;
+    border: 1px solid #3265fe;
+
+}
+.report-box:hover .report-i{
+    color: #3265fe;
+}
+.report-box p{
+    font-size: 12px;
+    line-height: 15px;
+}
+.report-box h6{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.report-box i{
+    background-color: #D9D9D9;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+.report-shedule-btn:active{
+    border-color: #fff !important;
+}
+.report-chkbx{
+font-size: 13px;
+}
+
+.dynamic-box { display: none; }
