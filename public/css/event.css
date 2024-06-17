@@ -1,0 +1,477 @@
+.form-create-event{
+    background-color: #fff;
+    border-radius: 24px;
+    box-shadow: 0px 0px 1px 1px #ccc;
+    padding: 19px 22px;
+}
+.fancy-box{
+    border: 1px solid #ACACAC;
+    border-radius: 32px;
+    padding: 20px 30px;
+
+
+}
+.fancy-title{
+    background-color: #fff;
+    position: absolute;
+    top: -12px;
+    left: 25px;
+    padding: 0 5px;
+    font-weight: 600;
+}
+.form-h6{
+    /* font-size: 18px; */
+    font-size: 15px;
+    margin: 0;
+    /* margin-bottom: 3px; */
+    color: #393939;
+    line-height: 20px;
+}
+.form-p{
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.font-s-rules{
+    font-size: 12px;
+    margin-right: 20px;
+    color: #a1a1a1;
+}
+.img-pre-given img{
+    border-radius:7px ;
+    margin-right: 10px;
+}
+.form-p-text{
+    font-size: 13px;
+    margin: 0;
+    color: #999;
+}
+.custom-textfield {
+    position: relative;
+    box-sizing: border-box;
+    /* min-width: 300px; */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  
+  .custom-textfield__label {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(77, 77, 77, 0.5);
+    /* -webkit-  user-select: none; 
+       -moz-  user-select: none; 
+        -ms-  user-select: none;  */
+              /* user-select: none; */ 
+    cursor: text;
+  }
+  
+  .custom-textfield__label::after {
+    position: relative;
+    top: -1px;
+    right: -5px;
+    display: inline-block;
+    content: "*";
+    color: #d0011b;
+  }
+  
+  .custom-textfield__input {
+    display: block;
+    box-sizing: border-box;
+    height: 40px;
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    outline: none;
+    transition: all 0.25s linear;
+  }
+  
+  .custom-textfield__input:focus {
+    border-color: #3a82c6;
+  }
+  
+  .custom-textfield__input:disabled {
+    border-color: #e6e6e6;
+    background: #f9fafb;
+  }
+  
+  .custom-textfield__input::-moz-placeholder {
+    color: transparent;
+  }
+  
+  .custom-textfield__input:-ms-input-placeholder {
+    color: transparent;
+  }
+  
+  .custom-textfield__input::placeholder {
+    color: transparent;
+  }
+  
+  .custom-textfield__input:focus + .custom-textfield__label, .custom-textfield__input:valid + .custom-textfield__label, .custom-textfield__input:disabled + .custom-textfield__label {
+    display: none;
+  }
+  
+.tips{
+    color: #FF0909;
+    font-size: 10px;
+}
+.ul-tb-switch{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.ul-tb-venu-switch{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.ul-tb-venu-switch li{
+    color: #3265FE;
+    /* margin-right: 10px; */
+    border: 1px solid #3265FE;
+    font-size: 14px;
+    padding: 3px 10px;
+    border-radius: 16px;
+     /* user-select: none; */
+    cursor: pointer;
+    transition: 0.5s;
+}
+.ul-tb-switch li{
+    color: #3265FE;
+    /* margin-right: 10px; */
+    border: 1px solid #3265FE;
+    font-size: 14px;
+    padding: 3px 10px;
+    border-radius: 16px;
+     /* user-select: none; */
+    cursor: pointer;
+}
+.tab-active{
+    color: #fff!important;
+background-color: #3265FE!important;
+}
+.tab-venu-active{
+    color: #fff!important;
+background-color: #3265FE!important;
+
+}
+.tab-venu-li-active{
+    display: block !important;;
+
+}
+.tab-venu-content li{
+}
+.color-999{
+  color: #999;
+}
+.select2-selection{
+  border: 1px solid #ccc!important;
+}
+.tab-venu{
+    
+    display:none;
+}
+.input-group-text{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+.timezone{
+    font-size: 13px;
+    color: #3265FE;
+    font-weight: bold;
+    cursor: pointer;
+    width: fit-content;
+}
+.timezoneArea{
+    color: #545454;
+    font-size: 12px;
+}
+.addLocation{
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.search-form-{
+    padding-left: 35px;
+}
+.search-element{
+    position: absolute;
+    top: 8px;
+    left: 9px;
+}
+
+/* modal timezone */
+ /* Styling for modal overlay */
+ .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+  /* Styling for modal content */
+  .timezone-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 10000;
+  }
+/* modal timezone end */
+
+.ql-toolbar{
+    border-radius: 7px 7px 0 0 ;
+}
+#editor , #editor2 {
+    border-radius:0 0 7px 7px  ;
+
+}
+/* Apply border radius to the table row */
+.agenda-table-row {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Apply border radius to the table cells */
+.agenda-table-font {
+    /* border: 1px solid #9f2222; */
+    /* padding: 5px; */
+    font-size: 14px;
+
+}
+
+.edit-agenda{
+    border: none;
+    background-color: #3265FE;
+    color: #fff;
+    border-radius: 9px;
+    padding: 5px 10px;
+    font-size: 15px;
+    margin-right: 10px;
+}
+.delete-agenda{
+    border: none;
+    background-color: #ED2323;
+    color: #fff;
+    border-radius: 9px;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+.agenda-row{
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 10px;
+}
+.add-agenda-btn{
+    border: 1px solid #3265FE;
+    background-color: #3265FE;
+    color: #fff;
+    /* border-radius: 9px;
+    padding: 5px 10px; */
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.4s;
+}
+
+
+.add-agenda-btn:hover{
+  border: 1px solid #3265FE;
+  color: #3265FE;
+
+}
+.add-agenda-btn-save{
+    /* border: none;
+    background-color: #ED2323;
+    color: #fff;
+    border-radius: 9px;
+    padding: 5px 10px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px; */
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    background-color: #f1664b;
+    /* border-radius: 10px; */
+    /* height: 36px !important; */
+}
+
+/* check box */
+.ch-timezone{
+    transform: scale(2.5); 
+    margin-right: 20px;
+}
+.display-time{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+     /* user-select: none; */
+}
+.tim-zn{
+    position: absolute;
+    top: -11px;
+    left: 10px;
+    background-color: #fff;
+    padding: 0 3px;
+    font-size: 14px;
+}
+.tim-zn-btn{
+    background-color: #A5A5A5;
+    border: 1px solid #A5A5A5;
+    color: #fff;
+    /* border: none; */
+    /* height: 35px;
+    width: 136px;
+    border-radius: 10px; */
+}
+.tim-zn-btn2{
+    background-color: #F05537;
+    border: 1px solid #F05537;
+
+    color: #fff;
+    /* border: none; */
+    /* height: 35px;
+    width: 136px;
+    border-radius: 10px; */
+}
+.tim-zn-btn:hover{
+  border: 1px solid #A5A5A5;
+}
+.tim-zn-btn2:hover{
+  border: 1px solid #F05537;
+}
+.timezone-modal{
+    border-radius: 11px;
+  }
+
+  /* agenda modal start */
+  .agenda-modal-overlay,
+  .faq-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .agenda-modal,
+  .faq-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 1001;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .add-agenda-btn,
+  .open-faq-btn {
+    /* Your button styles */
+    cursor: pointer;
+  }
+  
+  /* agenda modal end */
+  .agenda-modal{
+    border-radius: 11px;
+  }
+  .faq-modal{
+    width: 50%;
+    border-radius: 11px;
+    padding: 24px 14px;
+  }
+  /* .faq-modal{
+    width: 95%;
+  } */
+
+  .endDate{
+    width: 150px;
+    padding: 5px 10px;
+border-radius: 7px;
+border: 1px solid #ccc;
+  }
+  .w-in-bl{
+    display: inline-block;
+    width: 55px;
+  }
+  .circle-label {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    margin: 0 10px;
+    padding: 4px
+  }
+  
+  /* Optional: style when checkbox is checked */
+  input[type="checkbox"]:checked + .circle-label {
+    background-color: #000; /* Fill color when checked */
+    color: #fff; /* Text color when checked */
+  }
+  
+  .check-d-n{
+    display: none;
+  }
+
+  .img-downArrow{
+    width: 21px;
+    position: absolute;
+    top: 9px;
+    right: 6px;
+  }
+  .agenda-box-{
+    padding: 10px;
+    border: 3px dashed #4c4c4c;
+    border-radius: 28px;
+    background-color: #EFEDED;
+    min-height: 215px;
+  }
+  .ou-agenda-plus{
+     /* user-select: none; */
+    cursor: pointer;
+  }
+  #files-list-container{
+    display: none!important;
+  }
+  .t-b-announced{
+    background-color: #F8B2A5;
+    padding: 6px 10px;
+    width: fit-content;
+    border-radius: 10px;
+    font-size: 13px;
+  }

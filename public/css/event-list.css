@@ -1,0 +1,222 @@
+.listevent-select{
+  border: 1px solid #ccc;
+  padding: 8px 15px;
+  border-radius: 5px;
+  background-color: #3265FE;
+  color: #fff;
+  margin-top: 2px;
+
+}
+.listevent-search{
+  border: 1px solid #ccc;
+  padding: 6px 10px 6px 30px;
+  border-radius: 5px;
+  margin-top: 4px;
+}
+.list-search-mag{
+    position: absolute;
+    top: 16px;
+    left: 10px;
+}
+.even-list-p [type=search] {
+    -webkit-appearance: none;
+    outline-offset: 0px;
+}
+.listevent-select option{
+    background-color: #fff;
+    color: #000;
+    padding: 25px 0;
+}
+.even-list-p .cr-event{
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    background-color: #f1664b;
+    /* border-radius: 10px;
+    height: 36px !important;
+    width: 123px !important; */
+    transition: 0.3s;
+}
+.even-list-p .cr-event:hover{
+    background-color: #d2482c;
+
+}
+.progress-container-list_event {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .progress-bar-list_event {
+    
+    background-color: #e4e2e2;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .progress-bar-inner-list_event {
+    width: 0;
+    height: 10px;
+    background-color: #4caf50;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+  }
+  #prog-con{
+    font-size: 12px;
+ 
+  }
+
+  .even-list-p{
+    background-color: #fff;
+
+    padding: 20px 15px;
+    border-radius: 25px;
+  }
+  .even-list-p table thead .m-th{
+    text-align: center;
+  }
+  .middle-content-{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .gr-dot{
+    height: 6px;
+    width: 6px;
+    background-color: #4caf50;
+    border-radius: 50%;
+  }
+  
+  .even-list-p table thead tr{
+    background-color: #D3CECE;
+    border-bottom: 1px solid #424242;
+    
+  }
+
+  .even-list-p table tbody tr{
+    border-bottom: 1px solid #BDB8B8;
+  }
+  .even-list-p table tbody td{
+    border-bottom: 1px solid #BDB8B8;
+  }
+  .even-list-p table td{
+    padding: 10px 5px;
+  }
+  .even-list-p table th{
+    padding: 8px 5px;
+
+
+  }
+  .b-r-l{
+    border-top-left-radius: 10px;
+
+  }
+  .b-r-r{
+
+    border-top-right-radius: 10px;
+  }
+
+ 
+  .mng-events-e .apr{
+    color: #1360F7;
+    font-weight: 800;
+  }
+  .mng-events-e .apr-dt{
+    color: #1360F7;
+    font-weight: 800;
+    font-size: 25px;
+  }
+  .mng-events-e img{
+    border-radius: 10px;
+  }
+  .mng-events-e .evnt-name {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .mng-events-e .evnt-time {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .mng-events-e .evnt-place {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+  }
+
+  #myTable_filter {
+        display: none;
+  }
+  .paginate_button{
+    background: #bebebe!important;
+    padding: 5px 10px!important;
+    color: #000!important;
+    margin: 0 5px!important;
+    border-radius: 2px!important;
+  }
+  
+    .rd-dot{
+    height: 6px;
+    width: 6px;
+    background-color: #e70909;
+    border-radius: 50%;
+  }
+  .grey-dot{
+    height: 6px;
+    width: 6px;
+    background-color: #7f7d7d;
+    border-radius: 50%;
+  }
+
+  .tabs_tabbing_event {
+    margin: 0 auto;
+    /* max-width: 350px; */
+    font-size: 0;
+  }
+  
+  .tabs_tabbing_event > input[type="radio"] {
+    display: none;
+  }
+  
+  .tabs_tabbing_event > div {
+    display: none;
+    border: 1px solid #e0e0e0;
+    padding: 10px 15px;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  #tab-btn-1_tabbing_event:checked ~ #content-1_tabbing_event,
+  #tab-btn-2_tabbing_event:checked ~ #content-2_tabbing_event,
+  #tab-btn-3_tabbing_event:checked ~ #content-3_tabbing_event,
+  #tab-btn-4_tabbing_event:checked ~ #content-1_tabbing_event,
+  #tab-btn-5_tabbing_event:checked ~ #content-2_tabbing_event {
+    display: block;
+  }
+  
+  .tabs_tabbing_event > label {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+     /* user-select: none; */
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    padding: 2px 8px;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+  }
+  
+  .tabs_tabbing_event > label:not(:first-of-type) {
+    border-left: none;
+  }
+  
+  .tabs_tabbing_event > input[type="radio"]:checked + label {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+  

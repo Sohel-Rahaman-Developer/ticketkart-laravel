@@ -1,0 +1,127 @@
+.banks {
+  max-width: 189px;
+  /* background-color: yellow; */
+  border-radius: 13px;
+  padding: 10px;
+  box-shadow: 0px 0px 5px 1px #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.blue-shade{
+  border: 2px solid #3265fe;
+}
+.banks .iconCir3 {
+  height: 30px;
+}
+.banks:hover {
+  box-shadow: 0px 0px 1px 1px #a3a3a3;
+}
+.banks .fa-cc-stripe {
+  transition: 0.3s;
+  color: #03a9f4;
+}
+.banks:hover .fa-brands {
+  color: #059de3;
+}
+.accounts-finance {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 5px 5px;
+  margin-bottom: 12px;
+}
+.finance-btn {
+  background: none !important;
+  outline: none;
+  border: none;
+}
+.inner-box {
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 30px;
+  padding-top: 25px;
+}
+.accounts-finance .fa-brands {
+  color: #03a9f4;
+}
+.stacc-new {
+  padding: 15px 10px;
+  font-size: 18px;
+  background-color: #03a9f4;
+  color: #fff;
+  /* max-width: 160px; */
+  border-radius: 12px;
+  text-align: center;
+   /* user-select: none; */
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+.stacc-exist {
+  padding: 15px 10px;
+  background-color: #f05537;
+  color: #fff;
+  /* max-width: 160px; */
+  border-radius: 15px;
+  text-align: center;
+   /* user-select: none; */
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 18px;
+}
+.stacc-new:hover {
+  background-color: #0f3cc2;
+}
+.stacc-exist:hover {
+  background-color: #d23c1e;
+}
+.stripe-right {
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+.stripe-right .fa-brands {
+  color: #1e4fe1;
+}
+.strip-btn .cardEventBtn-org {
+  font-size: 15px;
+}
+.banks .startBrowsingHelp-overview {
+  font-weight: 400;
+  margin-top: 10px;
+}
+.paypaladd-box .agenda-box-blue {
+  border-color: #1e4fe1 !important;
+  background-color: #2159fff2 !important;
+  color: #fff;
+}
+
+.paypaladd-box .agenda-box-orange {
+  border-color: #f05537 !important;
+  background-color: #e54424e6 !important;
+  color: #fff;
+}
+.paypaladd-box .agenda-box- {
+  transition: 0.4s;
+}
+.agenda-box-blue:hover {
+  box-shadow: 0px 0px 10px 1px #1e4fe1;
+}
+.la-file-invoice-dollar {
+  transition: 0.4s;
+}
+.agenda-box-blue:hover .la-file-invoice-dollar {
+  scale: 1.2;
+}
+.agenda-box-orange:hover {
+  box-shadow: 0px 0px 10px 1px #f05537;
+}
+.la-link {
+  transition: 0.4s;
+}
+.agenda-box-orange:hover .la-link {
+  scale: 1.2;
+}

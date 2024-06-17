@@ -1,0 +1,160 @@
+.ticket-inf{
+    font-size: 13px;
+}
+.select-publish .select2-container--default{
+    width: 100%!important;
+}
+.select-publish .select2-selection--multiple{
+    height: 100px;
+}
+.select-publish .select2-dropdown{
+    display: none!important;
+}
+.select-publish .mysel-publish-absolu{
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    font-size: 11px;
+}
+.select-publish .mysel-publish-absolu-r{
+  position: absolute;
+  bottom: -10px;
+  right: 10px;
+  font-size: 11px;
+}
+.publish-body{
+    background: #fff;
+    padding: 25px 15px;
+    border-radius: 22px;
+}
+.publish-body .festBox{
+    box-shadow: 0 0px 11px 1px rgb(187 185 185);
+}
+.ticket-publish .add-agenda-btn-save{
+  text-decoration: none;
+  font-size: 15px;
+  color: #fff;
+  background-color: #f1664b;
+  /* border-radius: 10px; */
+  /* height: 36px !important; */
+  }
+  .save1con{
+    background-color: #f05537; 
+    color: #ffff;
+    transition: 0.4s;
+  }
+  .save1con:hover{
+    border: 1px solid #f05537;
+    color: #f05537;
+  }
+  .audiance{
+    position: absolute;
+    top: -9px;
+    left: 15px;
+    font-size: 12px;
+    background-color: #fff;
+  }
+.ticket-ui{
+  padding: 14px;
+  box-shadow: 0 0 10px 1px #ccc;
+  border-radius: 10px;
+}
+.select2-results__options{
+  display: none!important;
+}
+.select2-dropdown {
+  border: none!important;
+}
+/* tooltip design */
+/* START TOOLTIP STYLES */
+[tooltip] {
+    position: relative; /* opinion 1 */
+  }
+  
+  /* Applies to all tooltips */
+  [tooltip]::before,
+  [tooltip]::after {
+    text-transform: none; /* opinion 2 */
+    font-size: .9em; /* opinion 3 */
+    line-height: 1;
+     /* user-select: none; */
+    pointer-events: none;
+    position: absolute;
+    display: none;
+    opacity: 0;
+  }
+  [tooltip]::before {
+    content: '';
+    border: 5px solid transparent; /* opinion 4 */
+    z-index: 1001; /* absurdity 1 */
+  }
+  [tooltip]::after {
+    content: attr(tooltip); /* magic! */
+    
+    /* most of the rest of this is opinion */
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    
+    /* 
+      Let the content set the size of the tooltips 
+      but this will also keep them from being obnoxious
+      */
+    min-width: 3em;
+    max-width: 21em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 1ch 1.5ch;
+    border-radius: .3ch;
+    box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
+    background: #333;
+    color: #fff;
+    z-index: 1000; /* absurdity 2 */
+  }
+  
+  /* Make the tooltips respond to hover */
+  [tooltip]:hover::before,
+  [tooltip]:hover::after {
+    display: block;
+  }
+  
+  /* don't show empty tooltips */
+  [tooltip='']::before,
+  [tooltip='']::after {
+    display: none !important;
+  }
+  
+  /* FLOW: RIGHT */
+  [tooltip][flow^="right"]::before {
+    top: 50%;
+    border-left-width: 0;
+    border-right-color: #333;
+    right: calc(0em - 5px);
+    transform: translate(.5em, -50%);
+  }
+  [tooltip][flow^="right"]::after {
+    top: 50%;
+    left: calc(100% + 5px);
+    transform: translate(.5em, -50%);
+  }
+  
+  /* KEYFRAMES */
+  @keyframes tooltips-horz {
+    to {
+      opacity: .9;
+      transform: translate(0, -50%);
+    }
+  }
+  
+  /* FX All The Things */ 
+  [tooltip][flow^="right"]:hover::before,
+  [tooltip][flow^="right"]:hover::after {
+    animation: tooltips-horz 300ms ease-out forwards;
+  }
+  
+  /* UNRELATED to tooltips */
+
+
+
+  
+/* tooltip design end */
