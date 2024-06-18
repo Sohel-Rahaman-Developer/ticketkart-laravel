@@ -8,69 +8,11 @@
       <div class="row-divider d-flex flex-column">
         <div class="upperDivider flex-grow-1">
           <div class="d-flex middle-content">
-            <div class="menuSide d-none d-lg-block">
-              <div class="menuParent d-flex flex-column" style="padding-bottom: 120px">
-                <div class="d-none d-lg-block pt-1 pe-1 arrow-sticky">
-                  <div class="d-flex justify-content-end align-items-center">
-                    <i class="las icon-color la-chevron-circle-left left-menu-icon-dashboard activeMenuItem fs-2"></i>
-                  </div>
-                </div>
-                <ul class="menuUl pt-0 ps-0">
-                  <li class="menuLi menuLiHoverEffect d-flex align-items-center leftMenuActive">
-                    <span class="menuIcon">
-                      <i class="las icon-color la-home fs-2"></i>
-                    </span>
-                    <span class="menuCon d-flex justify-content-between align-items-center gap-2">
-                      <span>Home</span>
-                    </span>
-                  </li>
-                  <li class="menuLi menuLiHoverEffect d-flex align-items-center">
-                    <span class="menuIcon">
-                      <i class="las icon-color la-calendar-check fs-2"></i>
-                    </span>
-                    <span class="menuCon d-flex justify-content-between align-items-center gap-2">
-                      <span>My Tickets (45) </span>
-                    </span>
-                  </li>
-                  <li class="menuLi menuLiHoverEffect  d-flex align-items-center">
-                    <span class="menuIcon">
-                      <i class="las icon-color la-calculator fs-2"></i>
-                    </span>
-                    <span class="menuCon d-flex justify-content-between align-items-center gap-2">
-                      <span>Liked</span>
-                    </span>
-                  </li>
-                  <li class="menuLi menuLiHoverEffect d-flex align-items-center">
-                    <span class="menuIcon">
-                      <i class="lab la-wpforms fs-2"></i>
-                    </span>
-                    <span class="menuCon d-flex justify-content-between align-items-center gap-2">
-                      <span>Following</span>
-                    </span>
-                  </li>
-                  <li class="menuLi menuLiHoverEffect d-flex align-items-center">
-                    <span class="menuIcon">
-                      <i class="las icon-color la-bullhorn fs-2"></i>
-                    </span>
-                    <span class="menuCon d-flex justify-content-between align-items-center gap-2">
-                      <span>Manage Events</span>
-                    </span>
-                  </li>
-                </ul>
-                <div class="logoutBtn2 pe-3 d-flex align-items-end">
-                  <a href="" class="d-flex gap-2 justify-content-center align-items-center log-out-btn2">
-                    <img src="./images/attandee/switch.svg" alt="">
-                    <span class="logOutBtnJs log-o">Switch to Attendees</span>
-                  </a>
-                </div>
-                <div class="logoutBtn pe-3 d-flex align-items-end">
-                  <a href="" class="d-flex gap-2 justify-content-center align-items-center log-out-btn">
-                    <i class="fa-solid fa-right-from-bracket fs-3"></i>
-                    <span class="logOutBtnJs log-o">Logout</span>
-                  </a>
-                </div>
-              </div>
-            </div>
+
+            <!--Profile Component-->
+            <x-CustomerSidebar/>
+            <!--End Profile Component-->
+
             <div class="rightSide user-select-none">
               <div id="style-3" class="">
                 <div class="profile-content">
@@ -79,7 +21,10 @@
                       <div class="leftAside">
                         <div class="d-flex flex-column gap-4">
                           <div>
-                            <h5 class="d-none d-md-block user-select-none fw-bold"> Hi, Pratik Entertainment </h5>
+                            @if(Auth::check())
+                            <h5 class="d-none d-md-block user-select-none fw-bold"> Hi, {{ Auth::user()->name }} </h5>
+                            @endif
+
                             <div class="eventBoxes pb-5">
                               <div class="eventBoxHeading pb-2 user-select-none"> Your upcoming event in <span
                                   style="color: #3265fe">15 days</span>
@@ -93,8 +38,8 @@
                                   </div>
                                   <div class="d-flex flex-wrap gap-2 mt-1">
                                     <div class="btn cardEventBtn-org">
-                                      Download Ticket
-                                 </div>
+                                        Download Ticket
+                                    </div>
                                  <div class="btn cardEventBtn-org2">
                                   Add to Wallet
                                  </div>
@@ -129,7 +74,9 @@
                       </div>
                     </div>
                     <div class="order-1 order-md-1 ">
-                      <h5 class=" ms-3 pt-3 d-block d-md-none user-select-none fw-bold"> Hi, Pratik Entertainment </h5>
+                      @if(Auth::check())
+                      <h5 class=" ms-3 pt-3 d-block d-md-none user-select-none fw-bold"> Hi, {{ Auth::user()->name }} </h5>
+                      @endif
                       <div class="righside-parent-div-attendee expanded">
                         <div class="rightAside position-relative">
                           <div class="d-flex flex-column justify-content-center align-items-center proFile">
@@ -148,43 +95,16 @@
                                 </div>
                               </div>
                             </div>
-                            <!-- light box start -->
                             <div id="cus_lightbox" class="cus_lightbox">
                               <span class="cus_close" onclick="closeLightbox()">&times;</span>
                               <img src="" id="cus_lightboxImage" class="cus_lightbox-content" />
                             </div>
-                            <!-- light box end -->
-                            <!-- hellop -->
                           </div>
-                          <div class="org-con ">
-                            <div class="text-center mb-2 mt-2">
-                              <strong>Customer ID: TK-123456</strong>
-                            </div>
-                            <div class="all-org-list scale-down">
-                              <div class="d-flex justify-content-between mb-2">
-                                <div class="">Profile</div>
-                                <div class="">
-                                  <a href="#" class="text-primary">
-                                    <img src="./images/attandee/profile.svg" alt="" width="25px">
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="d-flex justify-content-between booking-my">
-                                <div class="">My Booking</div>
-                                <div class="">
-                                  <a href="">
-                                    <img src="./images/attandee/profile.svg" alt="" width="25px">
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="areYouOrga d-none d-lg-block">
-                                <a> Are you an organiser ? </a>
-                              </div>
-                              <div class="createYevent d-none d-lg-block">
-                                <a href=""> Create your event </a>
-                              </div>
-                            </div>
-                          </div>
+
+                          <!--Profile Component-->
+                          <x-Profile/>
+                          <!--End Profile Component-->
+
                           <svg class="downArrow2" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" height="40px" width="40px"
                             version="1.1" id="Layer_1" viewBox="0 0 330 330" xml:space="preserve">

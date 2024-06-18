@@ -5,12 +5,13 @@
         <div class="d-flex justify-content-between align-items-center header-gap position-relative">
           <div class="logoItem d-flex justify-content-center align-items-center">
             <a href="dashboard.html">
-              <img src="images/ticketkart.png" alt="logo" />
+              <img src="{{ asset('images/ticketkart.png') }}" alt="logo" />
             </a>
             <div class="d-block d-lg-none me-2">
               <img class="megamenuBtn" src="./images/attandee/megamenu.svg" alt="toggle">
             </div>
           </div>
+          <!--Search box-->
           <div
             class="search-location d-flex gap-1 flex-grow-1 justify-content-center align-items-center rounded-pill border me-0 me-lg-3">
             <a class="leftSearch position-relative">
@@ -88,6 +89,7 @@
               </div>
             </div>
           </div>
+          <!--End search box-->
           <div class="menuItems d-flex justify-content-center align-items-center">
             <!-- event create -->
             <div class="ms-1 d-none d-md-block">
@@ -96,7 +98,7 @@
             </div>
             <!-- drop down switch -->
             <div class="dropdown menuCustom">
-              <img class="notificationIcon" src="images/BwGMKBNKRu.gif" alt="" />
+              <img class="notificationIcon" src="{{ asset('images/BwGMKBNKRu.gif') }}" alt="" />
               <div class="notificationIconCount">5+</div>
             </div>
             <!-- drop down switch -->
