@@ -5,19 +5,32 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Attendee Dashboard</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+
   <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
   <link rel="stylesheet" href="{{ asset('css/media.css') }}" />
   <link rel="stylesheet" href="{{ asset('css/organiser.css') }}" />
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
-    integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="{{ asset('css/media_responsive.css') }}">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{{ asset('css/event.css') }}" />
+  <link rel="stylesheet" href="{{ asset('css/event-list.css') }}" />
+  <link rel="stylesheet" href="{{ asset('css/event-order.css') }}" />
+  <link rel="stylesheet" href="{{ asset('css/view-order.css') }}" />
+  <link rel="stylesheet" href="{{ asset('css/addOrganiser.css') }}" />
+  
     @livewireStyles
 </head>
 
@@ -26,12 +39,8 @@
   
   @yield('content')
   <!-- middile section end -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script>
     // Attach a click event listener to the element with the class 'menuParent'
     $(".left-menu-icon-dashboard").click(function () {
@@ -165,6 +174,56 @@
       }
     });
   </script>
+  <script>
+        $(document).ready(function () {
+            $('#event-filter').select2({
+                placeholder: "Filter by Event"
+            });
+            $('#editor4').summernote({
+            height: 200,
+            toolbar: [
+               ['undo', 'redo'],
+               ['bold', 'italic', 'underline', 'strikethrough', 'clear'],
+               ['superscript', 'subscript'],
+               ['fontsize', ['10']],
+               ['para', ['ul', 'ol', 'paragraph']],
+               ['color', ['color']],
+               ['insert', ['picture', 'link', 'video']],
+               ['view', ['fullscreen', 'codeview']]
+            ],
+            callbacks: {
+               onImageUpload: function (files) {
+                  uploadFile(files[0], 'image');
+               },
+               onMediaDelete: function ($target, editor, $editable) {
+                  // Handle media deletion if required
+               }
+            }
+         });
+         $('#editor5').summernote({
+            height: 200,
+            toolbar: [
+               ['undo', 'redo'],
+               ['bold', 'italic', 'underline', 'strikethrough', 'clear'],
+               ['superscript', 'subscript'],
+               ['fontsize', ['10']],
+               ['para', ['ul', 'ol', 'paragraph']],
+               ['color', ['color']],
+               ['insert', ['picture', 'link', 'video']],
+               ['view', ['fullscreen', 'codeview']]
+            ],
+            callbacks: {
+               onImageUpload: function (files) {
+                  uploadFile(files[0], 'image');
+               },
+               onMediaDelete: function ($target, editor, $editable) {
+                  // Handle media deletion if required
+               }
+            }
+         });
+        });
+
+    </script>
 
   @livewireScripts
 </body>

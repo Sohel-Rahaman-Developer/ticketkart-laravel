@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Spatie\Permission\Models\Role;
@@ -38,7 +39,7 @@ class UserController extends Controller
                 return redirect('login')->with('error', 'Your account is inactive. Please contact the administrator.');
             }
 
-            if(!$user->hasRole('Customer'))
+            if(!Gate::allows('isCustomer'))
             {
                 Auth::logout();
                 return redirect('login')->with('error', 'You are not allowed to access it');
@@ -62,6 +63,7 @@ class UserController extends Controller
 
     public function dashboard()
     {
+        Gate::authorize('isCustomer');
         return view('customer.user.dashboard');
     }
 
@@ -94,7 +96,6 @@ class UserController extends Controller
         $user->password = Hash::make($request->password);
         $user->phone_no = $request->phone_no;
         $user->save();
-
         $user->assignRole('Customer');
         return redirect('login')->with('success','Registered Successfully. Now you can login');
     }
