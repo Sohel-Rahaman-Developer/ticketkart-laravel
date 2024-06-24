@@ -1,0 +1,15 @@
+.order-drp-dwn{
+    padding: 4px 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 16px;
+}
+.order-select .select2-container .select2-selection--single {
+    height: 37px!important;
+}
+.order-select .select2-container--default .select2-selection--single .select2-selection__rendered {
+    padding: 5px 10px!important;
+}
+.order-select .select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 5px;
+}

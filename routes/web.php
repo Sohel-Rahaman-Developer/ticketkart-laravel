@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\OrganiserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +26,6 @@ Route::post('register', [UserController::class, 'store']);
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('dashboard', [UserController::class, 'dashboard'])->name('user.dashboard');
+    Route::get('add-organiser', [OrganiserController::class, 'create'])->name('organiser.create');
     Route::get('logout', [UserController::class, 'logout'])->name('logout');
 });
