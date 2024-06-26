@@ -226,6 +226,7 @@
     </script>
 
   @livewireScripts
+  @yield('customjs')
 </body>
 
 </html>

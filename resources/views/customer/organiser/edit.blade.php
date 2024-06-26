@@ -8,9 +8,8 @@
             <div class="upperDivider flex-grow-1">
                 <div class="d-flex middle-content w-100">
 
-
-                  @include('customer/sidemenu')
-
+                
+                @include('customer/sidemenu')
 
                     <div class="rightSide user-select-none w-100">
                         <div id="style-3" class="">
@@ -18,7 +17,7 @@
                                 <!-- event-list -->
                                 <div class="container mx-auto px-0">
                                     <div class="even-list-p">
-                                        <h4 class="mb-3">Add Organiser</h4>
+                                        <h4 class="mb-3">Edit Organiser</h4>
 
                                         @if($message = Session::get('message'))
                                         <div class="alert alert-success alert-dismissible">
@@ -28,7 +27,7 @@
                                         </div>
                                         @endif
 
-                                        <form action="{{route('organiser.store')}}" method="post"
+                                        <form action="{{route('organiser.update')}}" method="post"
                                             enctype="multipart/form-data">
                                             @csrf
                                             <div class="fancy-box position-relative mb-4">
@@ -39,10 +38,10 @@
                                                     Upload your organization's logo, attendees will see at the top
                                                     of your profile. Use a high quality square image.
                                                 </p>
-                                                <!-- choose file start -->
-                                                <!-- choose file start -->
-
+                                               
                                                 <label class="form__container" id="upload-container">
+                                                <img src="{{ asset('/uploads/logo/'.$organiser->logo ) }}"
+                                                style="height:200px;width:200px;">
                                                     <div>
                                                         <div class="text-center">
                                                             <svg width="56" height="34" viewBox="0 0 56 34" fill="none"
@@ -58,6 +57,9 @@
                                                     <input class="form__file" id="upload-files" type="file"
                                                         name="image">
                                                     <div id="preview"></div>
+                                                   
+                                                      
+
                                                 </label>
                                                 <div class="text-center">
                                                     <ul class="d-flex justify-content-center flex-wrap p-0 m-0">
@@ -92,7 +94,7 @@
 
                                                         <input class="form-control"
                                                             placeholder="e.g. Ticketkart Entertainment" name="name"
-                                                            id="organiserName" value="{{old('name')}}">
+                                                            id="organiserName" value="{{$organiser->name}}">
                                                         <span class="position-absolute limit-letter"
                                                             id="charCount">0/75</span>
                                                     </div>
@@ -106,7 +108,7 @@
 
                                                     <div class="form-group mt-2">
                                                         <input class="form-control" placeholder="e.g. abc@gmail.com"
-                                                            type="email" name="email" value="{{old('email')}}">
+                                                            type="email" name="email" value="{{$organiser->email}}">
                                                     </div>
                                                     @error('email')
                                                     <span style="color:red;">{{ $message }}</span>
@@ -117,7 +119,7 @@
 
                                                     <div class="form-group mt-2">
                                                         <input class="form-control" placeholder="e.g. +447812345678"
-                                                            name="phone" value="{{old('phone')}}">
+                                                            name="phone" value="{{$organiser->phone_no}}">
                                                     </div>
                                                     @error('phone')
                                                     <span style="color:red;">{{ $message }}</span>
@@ -133,9 +135,9 @@
                                                         <div class="form-group position-relative">
                                                             <input type="text" class="form-control"
                                                                 placeholder="your-domain" name="page_url" id="page_url"
-                                                                value="{{old('page_url')}}">
-
-                                                            <span class="position-absolute limit-letter"
+                                                                value="{{$organiser->page_url}}">
+                                                           
+                                                                <span class="position-absolute limit-letter"
                                                                 id="pageUrlCount">0/30</span>
 
                                                         </div>
@@ -150,10 +152,8 @@
                                                     <div class="form-group position-relative">
                                                         <input type="text" class="form-control"
                                                             placeholder="e.g. https://www.ticketkart.com"
-                                                            name="website_link" id="website_link"
-                                                            value="{{old('website_link')}}">
-                                                        <span class="position-absolute limit-letter"
-                                                            id="website_linkCount">0/140</span>
+                                                            name="website_link" id="website_link" value="{{$organiser->website_link}}">
+                                                        <span class="position-absolute limit-letter" id="website_linkCount" >0/140</span>
                                                     </div>
                                                     @error('website_link')
                                                     <span style="color:red;">{{ $message }}</span>
@@ -167,7 +167,7 @@
                                                     </p>
                                                     <div class="mb-4 mt-2">
                                                         <textarea id="editor4" class=" summernote" name="organiser_bio"
-                                                            value="{{old('organiser_bio')}}"></textarea>
+                                                            value="">{{$organiser->bio}}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="in-box-component mb-3">
@@ -178,7 +178,7 @@
                                                     </p>
                                                     <div class="mb-4 mt-2">
                                                         <textarea id="editor5" class=" summernote" name="description"
-                                                            value="{{old('description')}}"></textarea>
+                                                            value="">{{$organiser->description_event_page}}</textarea>
                                                     </div>
                                                 </div>
 
@@ -190,7 +190,7 @@
                                                     <div class="form-group position-relative">
                                                         <input type="text" class="form-control ps-4"
                                                             placeholder="Add your Facebook page full url"
-                                                            name="facebook_link" value="{{old('facebook_link')}}">
+                                                            name="facebook_link" value="{{$organiser->facebook_link}}">
                                                         <i class="fa-brands fa-facebook-f face-l"></i>
                                                     </div>
                                                 </div>
@@ -199,7 +199,7 @@
                                                     <div class="form-group position-relative">
                                                         <input type="text" class="form-control ps-4"
                                                             placeholder="Add your Twitter page full url"
-                                                            name="twitter_link" value="{{old('twitter_link')}}">
+                                                            name="twitter_link" value="{{$organiser->twitter_link}}">
                                                         <i class="fa-brands fa-twitter face-l"></i>
                                                     </div>
                                                 </div>
@@ -208,7 +208,7 @@
                                                     <div class="form-group position-relative">
                                                         <input type="text" class="form-control ps-4"
                                                             placeholder="Add your Instagram page full url"
-                                                            name="insta_link" value="{{old('insta_link')}}">
+                                                            name="insta_link" value="{{$organiser->instagram_link}}">
                                                         <i class="fa-brands fa-instagram face-l"></i>
                                                     </div>
                                                 </div>
@@ -407,6 +407,7 @@ function validateAndSanitizeInput(showAlert = false) {
 
 }
 </script>
+
 <script>
 const fileUpload = () => {
     const INPUT_FILE =

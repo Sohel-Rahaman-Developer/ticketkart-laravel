@@ -26,6 +26,11 @@ Route::post('register', [UserController::class, 'store']);
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('dashboard', [UserController::class, 'dashboard'])->name('user.dashboard');
+    Route::get('setting-organiser', [OrganiserController::class, 'index'])->name('organiser.select');
     Route::get('add-organiser', [OrganiserController::class, 'create'])->name('organiser.create');
+    Route::post('store-organiser', [OrganiserController::class, 'store'])->name('organiser.store');
+    Route::get('edit-organiser', [OrganiserController::class, 'edit'])->name('organiser.edit');
+    Route::post('update-organiser', [OrganiserController::class, 'update'])->name('organiser.update');
+
     Route::get('logout', [UserController::class, 'logout'])->name('logout');
 });
