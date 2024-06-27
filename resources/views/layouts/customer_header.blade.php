@@ -8,7 +8,7 @@
               <img src="{{ asset('images/ticketkart.png') }}" alt="logo" />
             </a>
             <div class="d-block d-lg-none me-2">
-              <img class="megamenuBtn" src="./images/attandee/megamenu.svg" alt="toggle">
+              <img class="megamenuBtn" src="{{asset('images/attandee/megamenu.svg')}}" alt="toggle">
             </div>
           </div>
           <!--Search box-->
@@ -16,13 +16,13 @@
             class="search-location d-flex gap-1 flex-grow-1 justify-content-center align-items-center rounded-pill border me-0 me-lg-3">
             <a class="leftSearch position-relative">
               <!-- <input type="text" class="searchEvents" name="" id="" placeholder="Search Events"> -->
-              <img class="me-2" src="./images/attandee/search.svg" alt="search">
+              <img class="me-2" src="{{asset('images/attandee/search.svg')}}" alt="search">
               <span class="searchEventsContent d-none d-md-block">Search Events</span>
             </a>
             <button
               class="rightLocation btn btn-secondary d-flex justify-content-start align-items-center dropdown-toggle rounded-pill"
               type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-              <img class="me-2" src="./images/attandee/location.svg" alt="">
+              <img class="me-2" src="{{asset('images/attandee/location.svg')}}" alt="">
               <span class="searchEventsContent d-none d-md-block">London</span>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -31,7 +31,7 @@
                   <div
                     class="ps-3 py-2 w-100 rounded browse-events d-flex gap-2 justify-content-start align-items-center px-2 pt-2">
                     <div>
-                      <img src="images/gps.png" alt="" width="20" class="b-e-img" />
+                      <img src="{{asset('images/gps.png')}}" alt="" width="20" class="b-e-img" />
                     </div>
                     <div class="browse-events-content">
                       <h6 class="mb-0">Use my current location</h6>
@@ -452,7 +452,7 @@
               </div>
               <div class="col-4 px-1">
                 <div class="megaMenuSingle d-flex flex-column justify-content-center align-items-center gap-2 mb-2">
-                  <img src="./images/attandee/switch.svg" alt="">
+                  <img src="{{asset('images/attandee/switch.svg')}}" alt="">
                   <p class="megaHeaderOverview"> Switch to Attendees </p>
                 </div>
               </div>

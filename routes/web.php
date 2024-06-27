@@ -29,8 +29,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('setting-organiser', [OrganiserController::class, 'index'])->name('organiser.select');
     Route::get('add-organiser', [OrganiserController::class, 'create'])->name('organiser.create');
     Route::post('store-organiser', [OrganiserController::class, 'store'])->name('organiser.store');
-    Route::get('edit-organiser', [OrganiserController::class, 'edit'])->name('organiser.edit');
+    Route::get('edit-organiser/{slug}', [OrganiserController::class, 'edit'])->name('organiser.edit');
     Route::post('update-organiser', [OrganiserController::class, 'update'])->name('organiser.update');
-
+    Route::get('team-manage/organiser/{slug}', [OrganiserController::class, 'team_management'])->name('organiser.teammanage');
+    Route::get('team-invite/organiser/{slug}', [OrganiserController::class, 'team_invite'])->name('organiser.teaminvite');
+    Route::post('team-invite/organiser-submit/{slug}', [OrganiserController::class, 'team_invite_submit'])->name('organiser.teaminvite.submit');
+    
     Route::get('logout', [UserController::class, 'logout'])->name('logout');
 });

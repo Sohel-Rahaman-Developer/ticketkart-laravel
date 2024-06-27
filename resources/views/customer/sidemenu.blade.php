@@ -98,7 +98,8 @@
         </div>
         <div class="logoutBtn2 pe-3 d-flex align-items-end">
             <a href="" class="d-flex gap-2 justify-content-center align-items-center log-out-btn2">
-                <img src="./images/attandee/switch.svg" alt="switch">
+                <img src="{{asset('images/attandee/switch.svg')}}" alt="switch">
+                
 
                 <span class="logOutBtnJs log-o">Switch to Attendees</span>
             </a>
