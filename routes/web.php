@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\OrganiserController;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('store-organiser', [OrganiserController::class, 'store'])->name('organiser.store');
     Route::get('edit-organiser', [OrganiserController::class, 'edit'])->name('organiser.edit');
     Route::post('update-organiser', [OrganiserController::class, 'update'])->name('organiser.update');
+
+    //Events Section
+    Route::resource('events', EventController::class);
 
     Route::get('logout', [UserController::class, 'logout'])->name('logout');
 });
