@@ -94,6 +94,7 @@
 
                                  <i class="icon-color menuIcon las la-cog fs-2" data-tooltip="Organiser Settings"></i>
 
+<<<<<<< HEAD
                                  <span class="menuCon d-flex justify-content-between align-items-center gap-2"><span>Organiser
                                        Settings</span></span>
                               </li>
@@ -113,3 +114,65 @@
                         </div>
                      </div>
                   </div>
+=======
+                <span
+                    class="menuCon d-flex justify-content-between align-items-center gap-2"><span>Inbox</span>(10)</span>
+            </li>
+        </ul>
+
+        <div class="manage">
+            <div class="d-flex justify-content-between align-items-center pe-3 manage-items">
+                <div class=""><strong class="leftManage">Manage</strong></div>
+                <div class="me-3 fs-4 manage-visibility">+</div>
+            </div>
+            <ul class="m-0 p-0 all-manage-item">
+                <li class="menuLi d-flex align-items-center justify-content-start">
+
+                    <i class="icon-color menuIcon las la-chair fs-2" data-tooltip="Seating Charts"></i>
+
+
+                    <span class="menuCon d-flex justify-content-between align-items-center gap-2"><span>Seating
+                            Charts</span></span>
+                </li>
+                <li class="menuLi d-flex align-items-center justify-content-start">
+
+                    <i class="icon-color menuIcon las la-users fs-2" data-tooltip="Team Access"></i>
+
+
+                    <span class="menuCon d-flex justify-content-between align-items-center gap-2"><span>Team
+                            Access</span></span>
+                </li>
+                <li class="menuLi d-flex align-items-center justify-content-start">
+
+                    <i class="icon-color menuIcon las la-user-check fs-2" data-tooltip="Check-in Users"></i>
+
+                    <span class="menuCon d-flex justify-content-between align-items-center gap-2"><span>Check-in
+                            Users</span></span>
+                </li>
+                <li class="menuLi d-flex align-items-center justify-content-start">
+
+                    <i class="icon-color menuIcon las la-cog fs-2" data-tooltip="Organiser Settings"></i>
+
+                    <span class="menuCon d-flex justify-content-between align-items-center gap-2"><span>Organiser
+                            Settings</span></span>
+                </li>
+            </ul>
+        </div>
+        <div class="logoutBtn2 pe-3 d-flex align-items-end">
+            <a href="" class="d-flex gap-2 justify-content-center align-items-center log-out-btn2">
+                <img src="{{asset('images/attandee/switch.svg')}}" alt="switch">
+                
+
+                <span class="logOutBtnJs log-o">Switch to Attendees</span>
+            </a>
+        </div>
+        <div class="logoutBtn pe-3 d-flex align-items-end">
+            <a href="" class="d-flex gap-2 justify-content-center align-items-center log-out-btn">
+
+                <i class=" icon-color fa-solid fa-right-from-bracket fs-3"></i>
+                <span class="logOutBtnJs log-o">Logout</span>
+            </a>
+        </div>
+    </div>
+</div>
+>>>>>>> chandan

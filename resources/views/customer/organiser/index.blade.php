@@ -38,10 +38,14 @@
                                                     </div>
                                                    
                                                 </div>
+
+                                                @foreach($organiser as $org)
                                                 <div class="settings-container d-flex justify-content-between align-content-center px-3 py-1 border border-2 rounded-3 mt-4">
                                                     <div class="enterp-name d-flex gap-2 align-items-center">
-                                                        <div class="entp-img border border-2 rounded-circle">img</div>
-                                                        <div class="name-entr"><h5 class="m-0 fs-6">Sarat Enterprise</h5></div>
+                                                        <div class="entp-img border border-2 rounded-circle">
+                                                           <img src="{{url('/')}}/uploads/logo/{{$org->logo}}" alt="" width="20">
+                                                        </div>
+                                                        <div class="name-entr"><h5 class="m-0 fs-6">{{$org->name}}</h5></div>
                                                     </div>
                                                     <div>
                                                         <div class="dropdown">
@@ -50,70 +54,17 @@
                                                             </button>
                                                             <ul class="dropdown-menu">
                                                                 <li><a class="dropdown-item" href="#">View</a></li>
-                                                                <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                                <li><a class="dropdown-item" href="{{route('organiser.edit',$org->slug)}}">Edit</a></li>
                                                                 <li><a class="dropdown-item" href="#">Delete</a></li>
-                                                                <li><a class="dropdown-item" href="#">Team Managment</a></li>
+                                                                <li><a class="dropdown-item" href="{{route('organiser.teammanage',$org->slug)}}">Team Managment</a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="settings-container d-flex justify-content-between align-content-center px-3 py-1 border border-2 rounded-3 mt-4">
-                                                    <div class="enterp-name d-flex gap-2 align-items-center">
-                                                        <div class="entp-img border border-2 rounded-circle">img</div>
-                                                        <div class="name-entr"><h5 class="m-0 fs-6">Sarat Enterprise</h5></div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="dropdown">
-                                                            <button class="edit-agenda2 me-0" data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <i class="fa-solid fa-ellipsis-vertical clickEventList" style="padding: 3px 6px; font-size: 22px;"></i>
-                                                            </button>
-                                                            <ul class="dropdown-menu">
-                                                                <li><a class="dropdown-item" href="#">View</a></li>
-                                                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                                                <li><a class="dropdown-item" href="#">Team Managment</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="settings-container d-flex justify-content-between align-content-center px-3 py-1 border border-2 rounded-3 mt-4">
-                                                    <div class="enterp-name d-flex gap-2 align-items-center">
-                                                        <div class="entp-img border border-2 rounded-circle">img</div>
-                                                        <div class="name-entr"><h5 class="m-0 fs-6">Sarat Enterprise</h5></div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="dropdown">
-                                                            <button class="edit-agenda2 me-0" data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <i class="fa-solid fa-ellipsis-vertical clickEventList" style="padding: 3px 6px; font-size: 22px;"></i>
-                                                            </button>
-                                                            <ul class="dropdown-menu">
-                                                                <li><a class="dropdown-item" href="#">View</a></li>
-                                                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                                                <li><a class="dropdown-item" href="#">Team Managment</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="settings-container d-flex justify-content-between align-content-center px-3 py-1 border border-2 rounded-3 mt-4">
-                                                    <div class="enterp-name d-flex gap-2 align-items-center">
-                                                        <div class="entp-img border border-2 rounded-circle">img</div>
-                                                        <div class="name-entr"><h5 class="m-0 fs-6">Sarat Enterprise</h5></div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="dropdown">
-                                                            <button class="edit-agenda2 me-0" data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <i class="fa-solid fa-ellipsis-vertical clickEventList" style="padding: 3px 6px; font-size: 22px;"></i>
-                                                            </button>
-                                                            <ul class="dropdown-menu">
-                                                                <li><a class="dropdown-item" href="#">View</a></li>
-                                                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                                                <li><a class="dropdown-item" href="#">Team Managment</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                @endforeach
+                                               
+
+
                                             </div>
                                         </div>
                                     </div>

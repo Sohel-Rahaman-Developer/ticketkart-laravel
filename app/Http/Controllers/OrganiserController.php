@@ -9,6 +9,7 @@ use App\Models\Organiser;
 use App\Models\Organiseruser;
 use Illuminate\Support\Facades\Auth; 
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
 class OrganiserController extends Controller
 {
     public function index()
@@ -22,7 +23,7 @@ class OrganiserController extends Controller
     {
         return view('customer.organiser.create');
     }
-    
+
     public function store(Request $request){
 
         $request->validate([
@@ -65,9 +66,9 @@ class OrganiserController extends Controller
         return redirect()->back()->with('message', 'Organiser Created Successfully!');
     }
 
-    public function edit()
+    public function edit($slug)
     {
-        $organiser= Organiser::where('user_id',Auth::user()->id)->first();  
+        $organiser= Organiser::where('slug', $slug)->first();  
         return view('customer.organiser.edit', compact('organiser'));
     }
 
@@ -119,5 +120,41 @@ class OrganiserController extends Controller
         $organiser->update();
 
         return redirect()->back()->with('message', 'Organiser Updated Successfully!');
+    }
+
+    public function team_management($slug)
+    {
+        $organiser=Organiser::with('organiserusers.role')->where('slug', $slug)->first(); 
+   
+        return view('customer.organiser.team_management', compact('organiser'));
+    }
+
+    public function team_invite($slug)
+    {
+        $role=Organiserrole::all();
+
+        return view('customer.organiser.team_invite',compact('role','slug'));
+    }
+
+    function team_invite_submit(Request $request ,$slug){
+        $request->validate([
+
+            'email' => 'required',
+            'role_id' => 'required',
+        ]);
+     $organiserId=Organiser::where('slug',$slug)->first();
+        //  dd($organiserId);
+        // $token = Str::random(20);
+        // $inviteuser=new Inviteorganisationuser;
+        // $inviteuser->email = $request->email;
+        // $inviteuser->role_id = $request->role_id;
+        // $inviteuser->access_startdate = $request->access_startdate;
+        // $inviteuser->access_enddate = $request->access_enddate;
+        // $inviteuser->token = $token;
+        // $inviteuser->sender_id = Auth::user()->id;
+        // $inviteuser->organiser_id = $organiserId;
+        
+
+        return redirect()->back();
     }
 }

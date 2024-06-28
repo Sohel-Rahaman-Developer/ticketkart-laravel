@@ -39,7 +39,7 @@
 
                         @if($message = Session::get('success'))
                         <div class="alert alert-success alert-dismissible fade show" role="alert">
-                          <strong>Error</strong> {{ $message }}
+                          <strong>Success</strong> {{ $message }}
                           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                         @endif
@@ -81,7 +81,7 @@
                                 <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
                             </div>
                             <div class="form-group pt-3">
-                                <p class="text-center">Don’t have an account ? <a href=""> Create an account</a></p>
+                                <p class="text-center">Don’t have an account ? <a href="{{route('register')}}"> Create an account</a></p>
                             </div>
                         </form>
                         <div class="">

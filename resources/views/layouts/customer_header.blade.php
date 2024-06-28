@@ -1,26 +1,38 @@
   <!-- header section start -->
   <header class="sticky-top bg-white">
-        <div class="container-fluid px-0 position-relative">
-            <div class="px-2 pe-3 header">
-                <div class="d-flex justify-content-between align-items-center header-gap position-relative">
-                    <div class="logoItem d-flex justify-content-center align-items-center">
-                        <a href="dashboard.html">
-                            <img src="../images/ticketkart.png" alt="logo" />
-                        </a>
-                        <div class="d-block d-lg-none me-2">
-                            <svg width="22" class="megamenuBtn" height="33" viewBox="0 0 33 33" fill="none"
-                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <rect width="33" height="33" fill="url(#pattern0_679_1631)" />
-                                <defs>
-                                    <pattern id="pattern0_679_1631" patternContentUnits="objectBoundingBox" width="1"
-                                        height="1">
-                                        <use xlink:href="#image0_679_1631" transform="scale(0.01)" />
-                                    </pattern>
-                                    <image id="image0_679_1631" width="100" height="100"
-                                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB6ElEQVR4nO2cQU7DMAAE+w4482Z7pDygHHhZhQR8AOQDB4JV0tImG3lGytVGMyoCsuJwEBERERERCaSU8gS81Fo/gM//PO2MWutzKeXRe6+MUWt9/W+IznM6F6UMdu9i2ifjDl/c93P03gu5xbepM8+b917IXOJa5zHYvZsdmC4Gg2SJwSBZYjBIlhgMkiUGg2SJwSBZYjBIlhgMkiUGg2SJwSBZYjBIlhgMkiUGg2SJwSBZYthBkPf5oWu8oGKwexfTBglbvMKtg927mPZivr2gv8MXd5qm6cF7r6CJa3Vv9HFuZxzPxRj1XhERERHZFNfvrLL2XxxjpBV6cf3eh8FW94tx/U7WHxfnh651HoPdu9mB6WIwSJYYDJIlBoNkicEgWWIwSJYYDJIlBoNkicEgWWIwSJYYDJIlBoNkicEgWWIwSJYYDJIlhh0EGWqFjuv3PtX1ex/X76yy9r+I0Vbok+t3ERERkRFx/c7VP267fufvX9Bcv+9ohY7r9z51sP85v5j5oWudx2D3bnZguhgMkiUGg2SJwSBZYjBIlhgMkiUGg2SJwSBZYjBIlhgMkiUGg2SJwSBZYjBIlhgMkiUGg2SJYQdBhlqh4/q9T3X93sf1O7f6VLp+56cQ1+8iIiIiIiKH33wB69+e5jHAzHkAAAAASUVORK5CYII=" />
-                                </defs>
-                            </svg>
-                        </div>
+
+    <div class="container-fluid px-0 position-relative">
+      <div class="px-2 pe-3 header">
+        <div class="d-flex justify-content-between align-items-center header-gap position-relative">
+          <div class="logoItem d-flex justify-content-center align-items-center">
+            <a href="dashboard.html">
+              <img src="{{ asset('images/ticketkart.png') }}" alt="logo" />
+            </a>
+            <div class="d-block d-lg-none me-2">
+              <img class="megamenuBtn" src="{{asset('images/attandee/megamenu.svg')}}" alt="toggle">
+            </div>
+          </div>
+          <!--Search box-->
+          <div
+            class="search-location d-flex gap-1 flex-grow-1 justify-content-center align-items-center rounded-pill border me-0 me-lg-3">
+            <a class="leftSearch position-relative">
+              <!-- <input type="text" class="searchEvents" name="" id="" placeholder="Search Events"> -->
+              <img class="me-2" src="{{asset('images/attandee/search.svg')}}" alt="search">
+              <span class="searchEventsContent d-none d-md-block">Search Events</span>
+            </a>
+            <button
+              class="rightLocation btn btn-secondary d-flex justify-content-start align-items-center dropdown-toggle rounded-pill"
+              type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+              <img class="me-2" src="{{asset('images/attandee/location.svg')}}" alt="">
+              <span class="searchEventsContent d-none d-md-block">London</span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <div class="d-flex px-2 flex-column gap-2">
+                <a href="" class="b-e-h w-100 my-1">
+                  <div
+                    class="ps-3 py-2 w-100 rounded browse-events d-flex gap-2 justify-content-start align-items-center px-2 pt-2">
+                    <div>
+                      <img src="{{asset('images/gps.png')}}" alt="" width="20" class="b-e-img" />
                     </div>
                     <div
                         class="search-location d-flex gap-1 flex-grow-1 justify-content-center align-items-center rounded-pill border me-0 me-lg-3">
@@ -574,6 +586,44 @@
                         </div>
                     </div>
                 </div>
+
+              </div>
+              <div class="col-4 px-1">
+                <div class="megaMenuSingle d-flex flex-column justify-content-center align-items-center gap-2 mb-2">
+                  <i class="las icon-color la-landmark fs-1"></i>
+                  <p class="megaHeaderOverview">Finance</p>
+                </div>
+              </div>
+              <div class="col-4 px-1">
+                <div class="megaMenuSingle d-flex flex-column justify-content-center align-items-center gap-2 mb-2">
+                  <i class="las icon-color la-chair fs-2"></i>
+                  <p class="megaHeaderOverview"> Seating Charts </p>
+                </div>
+              </div>
+              <div class="col-4 px-1">
+                <div class="megaMenuSingle d-flex flex-column justify-content-center align-items-center gap-2 mb-2">
+                  <i class="las icon-color la-users fs-2"></i>
+                  <p class="megaHeaderOverview">Team Access</p>
+                </div>
+              </div>
+              <div class="col-4 px-1">
+                <div class="megaMenuSingle d-flex flex-column justify-content-center align-items-center gap-2 mb-2">
+                  <i class="las icon-color la-user-check fs-2"></i>
+                  <p class="megaHeaderOverview"> Check-in Users </p>
+                </div>
+              </div>
+              <div class="col-4 px-1">
+                <div class="megaMenuSingle d-flex flex-column justify-content-center align-items-center gap-2 mb-2">
+                  <i class="las icon-color la-cog fs-2"></i>
+                  <p class="megaHeaderOverview"> Org. Settings </p>
+                </div>
+              </div>
+              <div class="col-4 px-1">
+                <div class="megaMenuSingle d-flex flex-column justify-content-center align-items-center gap-2 mb-2">
+                  <img src="{{asset('images/attandee/switch.svg')}}" alt="">
+                  <p class="megaHeaderOverview"> Switch to Attendees </p>
+                </div>
+              </div>
             </div>
         </div>
     </header>
