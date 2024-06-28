@@ -10,7 +10,7 @@
 
                     @include('customer/sidemenu')
 
-                        <div class="rightSide user-select-none w-100">
+                        <div class="rightSide w-100">
                             <div id="style-3" class="">
                                 <div class="profile-content">
                                     <!-- event-list -->
